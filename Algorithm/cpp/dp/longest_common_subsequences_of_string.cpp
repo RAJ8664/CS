@@ -12,7 +12,7 @@ int solve(int i , int j , vector<vector<int>>& dp, string s, string t) {
 
 int main() {
 	string s, t;
-    cin >> s >> t;
+        cin >> s >> t;
 	int n = (int)s.size();
 	int m = (int)t.size();
 	vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1));
