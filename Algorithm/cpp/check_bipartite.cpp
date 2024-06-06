@@ -23,7 +23,6 @@ int main() {
 		adj[v].push_back(u);
 	}
 
-
 	vector<int> color(n + 1, -1);
 	for(int i = 1; i <= n; i++) {
 		if(color[i] == -1) {
@@ -32,7 +31,6 @@ int main() {
 				return 0;
 			}
 		}
-
 	}
 	cout << "YES" << endl;
 	return 0;
