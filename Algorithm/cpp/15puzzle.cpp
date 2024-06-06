@@ -14,7 +14,6 @@ int position(vector<vector<int>>& arr) {
     return -1;
 }
 
-
 int count_inv(vector<vector<int>>& arr) {
     int n = arr.size();
     int m = arr[0].size();
@@ -24,7 +23,7 @@ int count_inv(vector<vector<int>>& arr) {
             res.push_back(arr[i][j]);
         }
     }
-
+	
     int count = 0;
     for(int i = 0; i < res.size(); i++) {
         if(res[i] == 0) continue;
@@ -32,12 +31,11 @@ int count_inv(vector<vector<int>>& arr) {
             if(res[i] > res[j] && res[j] != 0) count++;
         }
     }
-    
     return count;
 }
 
 int main() {
-	int n;
+    int n;
     cin >> n;
     vector<vector<int>> arr(n , vector<int>(n));
     for(int i = 0; i < n; i++) {
@@ -45,8 +43,6 @@ int main() {
             cin >> arr[i][j];
         }
     }
-
-
     if(n % 2 == 1) {
         if(count_inv(arr) % 2 == 0) cout << "YES" << endl;
         else cout << "NO" << endl;
